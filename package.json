@@ -1,0 +1,52 @@
+{
+  "name": "ascii-deconstructor",
+  "version": "1.0.0",
+  "description": "Zero-dependency 60 FPS HTML5 Canvas 2D engine that progressively deconstructs live video or images across 5 visual stages: RAW, DRIFT, PARTICLE, HYBRID, and BINARY.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "prepare": "npm run build",
+    "dev": "vite --host",
+    "build:demo": "tsc --noEmit && vite build --outDir dist-demo",
+    "preview": "vite preview --outDir dist-demo --host",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "ascii",
+    "canvas",
+    "canvas-2d",
+    "visual-effects",
+    "creative-coding",
+    "particles",
+    "binary",
+    "video",
+    "image-processing",
+    "typescript",
+    "zero-dependencies"
+  ],
+  "author": "Jefté Martins <jefte.martins@hotmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JefteMartins/ascii-deconstructor.git"
+  },
+  "homepage": "https://github.com/JefteMartins/ascii-deconstructor#readme",
+  "devDependencies": {
+    "typescript": "^5.7.2",
+    "vite": "^6.0.5"
+  }
+}

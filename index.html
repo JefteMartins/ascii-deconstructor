@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ascii-deconstructor — Interactive Demo</title>
+  </head>
+  <body>
+    <canvas id="stage" aria-label="ASCII Deconstructor interactive canvas"></canvas>
+
+    <main class="hud" aria-label="Engine controls">
+      <header class="hud__header">
+        <div>
+          <p class="hud__eyebrow">ZERO-DEPENDENCY CANVAS 2D ENGINE</p>
+          <h1 class="hud__title">ascii-deconstructor</h1>
+        </div>
+        <div class="hud__telemetry" id="telemetry">
+          <span id="stage-badge">01 · RAW</span>
+          <span class="sep">·</span>
+          <span id="media-label">procedural-fallback</span>
+        </div>
+      </header>
+
+      <section class="hud__stages" aria-label="Render stages">
+        <button type="button" class="stage-btn" data-progress="0.06">01 RAW</button>
+        <button type="button" class="stage-btn" data-progress="0.29">02 DRIFT</button>
+        <button type="button" class="stage-btn" data-progress="0.51">03 PARTICLE</button>
+        <button type="button" class="stage-btn" data-progress="0.72">04 HYBRID</button>
+        <button type="button" class="stage-btn" data-progress="0.93">05 BINARY</button>
+      </section>
+
+      <section class="hud__slider-row">
+        <label for="progress-slider">Progress</label>
+        <input
+          id="progress-slider"
+          type="range"
+          min="0"
+          max="1"
+          step="0.002"
+          value="0.29"
+        />
+        <output id="progress-value" for="progress-slider">0.29</output>
+      </section>
+
+      <footer class="hud__actions">
+        <label class="action-btn action-btn--primary">
+          <input id="file-input" type="file" accept="image/*,video/*" hidden />
+          Load image / video
+        </label>
+        <button type="button" class="action-btn" id="reset-btn">Reset media</button>
+        <button type="button" class="action-btn" id="auto-btn" aria-pressed="false">
+          Auto sweep
+        </button>
+      </footer>
+    </main>
+
+    <script type="module" src="/demo/demo.ts"></script>
+  </body>
+</html>
